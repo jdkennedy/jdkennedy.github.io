@@ -4,22 +4,34 @@
 <head>
   <meta charset="utf-8">
   <title>Test Page For Tag Status Codes</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T59QCXC');</script>
+  <!-- End Google Tag Manager -->
 
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T59QCXC"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <p>Test page for site tags</p>
   <p>This page currently has Microsoft Ads and Google Ads tags</p>
   <p>To view the tag setup, right click in the webpage and then click View Source or View Page Source depending on your browser</p>
 
+  <button onclick="logConversion()">Click for conversion test</button>
+
   <script>
    function GetRevenueValue() {return 6;}
   </script>
-
-  <img src="//bat.bing.com/action/0?ti=26262848&Ver=2&evt=custom&ec=conversion&gv=6&gc='USD'" height="0" width="0" style="display:none ; visibility: hidden;" />
-
-
+  <script>
+    function logConversion() {console.log("conversion action")}
+  </script>
 
 </body>
 </html>
