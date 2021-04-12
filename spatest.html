@@ -1,14 +1,34 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="myApp">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
   </head>
   <body>
-    <div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-    </div>
+    <p><a href="#/!">Main</a></p>
+    <a href="#!red">Red</a>
+    <a href="#!green">Green</a>
+    <a href="#!blue">Blue</a>
+
+    <div ng-view></div>
+
+    <script>
+      var app = angular.module("myApp", ["ngRoute"]);
+      app.config(function($routeProvider) {
+        $routeProvider
+        .when("/", {
+          templateUrl : "spatest.html"
+        })
+        .when("/red", {
+          templateUrl : "red.html"
+        })
+        .when("/green", {
+          templateUrl : "green.html"
+        })
+        .when("/blue", {
+          templateUrl : "blue.html"
+        });
+      });
+    </script>
   </body>
 </html>
