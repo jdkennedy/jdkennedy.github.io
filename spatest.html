@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
   </head>
   <body>
-    <p><a href="#/!">Main</a></p>
+    <p><a href="#!spatest">Main</a></p>
     <a href="#!red">Red</a>
     <a href="#!green">Green</a>
     <a href="#!blue">Blue</a>
@@ -16,7 +16,7 @@
       var app = angular.module("myApp", ["ngRoute"]);
       app.config(function($routeProvider) {
         $routeProvider
-        .when("/", {
+        .when("/spatest", {
           templateUrl : "spatest.html"
         })
         .when("/red", {
